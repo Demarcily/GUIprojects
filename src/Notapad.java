@@ -22,7 +22,6 @@ public class Notapad {
 
 
 
-
   public static void main(String[] args) {
     JFrame frame = new JFrame("Notapad");
     frame.setContentPane(new Notapad().panel1);
