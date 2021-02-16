@@ -6,11 +6,18 @@ import java.awt.event.KeyEvent;
 public class Notapad {
   public Notapad() {
     menuBar = new JMenuBar();
+
     menu = new JMenu("File");
     menu.setMnemonic(KeyEvent.VK_F);
     menuBar.add(menu);
 
+    menuItemNew = new JMenuItem("New", KeyEvent.VK_N);
+    menuItemNew.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_1, ActionEvent.ALT_MASK));
+    menu.add(menuItemNew);
 
+    menuItemSave = new JMenuItem("Save", KeyEvent.VK_S);
+
+    menu.add(menuItemSave);
 
 
     clearButton.addActionListener(new ActionListener() {
@@ -49,5 +56,5 @@ public class Notapad {
   private JTextArea MainText;
   private JMenuBar menuBar;
   private JMenu menu;
-  private JMenuItem Item1;
+  private JMenuItem menuItemNew, menuItemSave;
 }
