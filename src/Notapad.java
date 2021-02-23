@@ -16,7 +16,6 @@ public class Notapad {
     menu.add(menuItemNew);
 
     menuItemSave = new JMenuItem("Save", KeyEvent.VK_S);
-
     menu.add(menuItemSave);
 
 
@@ -41,12 +40,11 @@ public class Notapad {
   public static void main(String[] args) {
     JFrame frame = new JFrame("Notapad");
     Notapad helpme = new Notapad();
-    frame.setContentPane(new Notapad().panel1);
+    frame.setContentPane(helpme.panel1);
     frame.setJMenuBar(helpme.menuBar);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.pack();
     frame.setVisible(true);
-
 
 
   }
