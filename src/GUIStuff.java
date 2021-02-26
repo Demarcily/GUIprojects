@@ -8,17 +8,26 @@ public class GUIStuff {
     panel = new JPanel();
     text = new JTextArea(30, 70);
     panel.add(text);
-    button = new JButton("Click here");
-    panel.add(button);
 
-
-
+    button = new JButton("Clear");
     button.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent actionEvent) {
         text.setText("");
       }
     });
+    panel.add(button);
+
+    button = new JButton("Copy");
+    button.addActionListener(new ActionListener(){
+      @Override
+      public void actionPerformed(ActionEvent actionEvent) {
+        System.out.println(text.getText());
+      }
+    });
+    panel.add(button);
+
+
 
   }
 
